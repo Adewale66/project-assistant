@@ -15,7 +15,6 @@ This is a project to assist users in managing their projects, both locally and o
 - OpenAI
 - Gemini
 - Anthropic
-- Groq
 - Ollama
 - Deepseek
 
