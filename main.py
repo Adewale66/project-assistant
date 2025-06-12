@@ -12,6 +12,9 @@ from typing import AsyncGenerator, Any
 from graph import build_agent
 from langchain_core.runnables import RunnableConfig
 from config import mcp_config
+import logging
+
+logging.disable(logging.WARNING)  # Issues with Gemini
 
 
 async def main():
@@ -50,7 +53,7 @@ async def main():
         messages = {"messages": HumanMessage(content=user_input)}
 
         print(
-            "=================================== Assistant ==================================="
+            "\n\n=================================== Assistant ==================================="
         )
         async for response in stream_graph_response(messages):
             print(response, end="", flush=True)
