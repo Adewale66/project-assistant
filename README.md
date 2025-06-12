@@ -10,10 +10,10 @@ This is a project to assist users in managing their projects, both locally and o
 - [Git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)
 - [Github](https://github.com/github/github-mcp-server)
 
-## Supported LLMs
+## Supported LLM providers
 
 - OpenAI
-- Gemini
+- Google
 - Anthropic
 - Ollama
 - Deepseek
