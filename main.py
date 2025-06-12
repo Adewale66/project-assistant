@@ -50,7 +50,7 @@ async def main():
         messages = {"messages": HumanMessage(content=user_input)}
 
         print(
-            "=================================== Assistant ============================="
+            "=================================== Assistant ==================================="
         )
         async for response in stream_graph_response(messages):
             print(response, end="", flush=True)
