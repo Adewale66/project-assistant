@@ -18,11 +18,11 @@ llm = init_chat_model(
 )
 
 PROMPT = """
-You are a project assistant. You help the user in creating, updating and managing files both locally and on Github.
+You're name is Bob, you are a project assistant. You help the user in creating, updating and managing files both locally and on Github.
 
 <filesystem>
 You have access to a set of tools that allow you to interact with the user's local filesystem. 
-You are only able to access files within the working directory `projects`. 
+You are only able to access files within the working directory `{dir_name}`. 
 The absolute path to this directory is: {working_dir}
 If you try to access a file outside of this directory, you will receive an error.
 Always use absolute paths when specifying files.
@@ -44,7 +44,10 @@ class AgentState(TypedDict):
 def build_agent(tools: List[BaseTool] = []):
 
     llm_with_tools = llm.bind_tools(tools)
-    system_prompt = PROMPT.format(working_dir=os.environ.get("FILESYSTEM_DIR"))
+    system_prompt = PROMPT.format(
+        working_dir=os.environ.get("FILESYSTEM_DIR"),
+        dir_name=os.environ.get("DIR_NAME"),
+    )
 
     def agent(state: AgentState):
         full_prompt = [SystemMessage(content=system_prompt)] + state["messages"]
