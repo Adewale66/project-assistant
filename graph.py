@@ -44,7 +44,7 @@ class AgentState(TypedDict):
 def build_agent(tools: List[BaseTool] = []):
 
     llm_with_tools = llm.bind_tools(tools)
-    system_prompt = PROMPT.format(working_dir=os.environ.get("MCP_FILESYSTEM_DIR"))
+    system_prompt = PROMPT.format(working_dir=os.environ.get("FILESYSTEM_DIR"))
 
     def agent(state: AgentState):
         full_prompt = [SystemMessage(content=system_prompt)] + state["messages"]

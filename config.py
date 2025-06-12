@@ -15,7 +15,7 @@ mcp_config: dict[str, Connection] = {
         "args": [
             "-y",
             "@modelcontextprotocol/server-filesystem",
-            f"{os.environ.get('MCP_FILESYSTEM_DIR')}",
+            f"{os.environ.get('FILESYSTEM_DIR')}",
         ],
         "transport": "stdio",
     },
@@ -23,7 +23,7 @@ mcp_config: dict[str, Connection] = {
     "github": {
         "command": "./github-mcp-server",
         "args": ["stdio"],
-        "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": f"{os.environ.get('MCP_GITHUB_PAT')}"},
+        "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": f"{os.environ.get('GITHUB_PAT')}"},
         "transport": "stdio",
     },
 }  # type: ignore
