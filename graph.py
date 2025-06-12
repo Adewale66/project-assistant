@@ -10,9 +10,10 @@ import os
 
 load_dotenv()
 
+model = os.environ.get("LLM_MODEL")
 
 llm = init_chat_model(
-    "google_genai:gemini-2.0-flash",
+    model,
     temperature=0,
 )
 
@@ -43,9 +44,6 @@ class AgentState(TypedDict):
 def build_agent(tools: List[BaseTool] = []):
 
     llm_with_tools = llm.bind_tools(tools)
-    tools_json = [
-        tool.model_dump_json(include={"name", "description"}) for tool in tools
-    ]
     system_prompt = PROMPT.format(working_dir=os.environ.get("MCP_FILESYSTEM_DIR"))
 
     def agent(state: AgentState):

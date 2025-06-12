@@ -10,6 +10,12 @@ This is a project to assist users in managing their projects, both locally and o
 - [Git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)
 - [Github](https://github.com/github/github-mcp-server)
 
+## Supported LLMs
+
+- OpenAI
+- Gemini
+- Anthropic
+
 ## Required tools:
 
 - Python >=3.11

@@ -49,7 +49,9 @@ async def main():
             break
         messages = {"messages": HumanMessage(content=user_input)}
 
-        print("Assistant: ", end="")
+        print(
+            "=================================== Assistant ============================="
+        )
         async for response in stream_graph_response(messages):
             print(response, end="", flush=True)
 
