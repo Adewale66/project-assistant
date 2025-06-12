@@ -1,0 +1,15 @@
+[project]
+name = "project-assistant"
+version = "0.1.0"
+description = "An AI agent acting as a project assistant"
+authors = [{ name = "Adewale Kujore" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=0.9.9",
+    "ipython>=9.3.0",
+    "langchain[google-genai,openai]>=0.3.25",
+    "langchain-mcp-adapters>=0.1.7",
+    "langgraph>=0.4.8",
+    "ipykernel>=6.29.5",
+]
