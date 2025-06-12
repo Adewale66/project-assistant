@@ -2,8 +2,6 @@
 This file implements the MCP Client for our Langgraph Agent.
 
 MCP Clients are responsible for connecting and communicating with MCP servers.
-This client is analagous to Cursor or Claude Desktop and you would configure them in the
-same way by specifying the MCP server configuration in my_mcp/mcp_config.json.
 """
 
 from langchain_mcp_adapters.client import MultiServerMCPClient
