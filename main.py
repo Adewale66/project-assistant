@@ -76,7 +76,7 @@ async def main():
         Stream the response from the agent while parsing out tool calls.
 
         Yields:
-            A processed string from the graph's chunked response.
+            Token from AI response and Tool calls.
         """
         async for message_chunk, meta in agent_executor.astream(
             input=input, stream_mode="messages", config=stream_config
