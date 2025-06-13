@@ -41,7 +41,7 @@ async def main():
             if isinstance(message_chunk, AIMessageChunk):
                 yield message_chunk.content
             elif isinstance(message_chunk, ToolMessage):
-                yield f"\n\n< TOOL CALL: {message_chunk.name} > \n\n"
+                yield message_chunk.pretty_print()
             continue
 
     while True:

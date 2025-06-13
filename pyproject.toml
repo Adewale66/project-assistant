@@ -11,5 +11,5 @@ dependencies = [
     "langchain-mcp-adapters>=0.1.7",
     "langgraph>=0.4.8",
     "ipykernel>=6.29.5",
-    "langchain[anthropic,deepseek,gemini,google-genai,ollama,openai]>=0.3.25",
+    "langchain[anthropic,deepseek,google-genai,ollama,openai]>=0.3.25",
 ]

@@ -11,6 +11,9 @@ import os
 load_dotenv()
 
 model = os.environ.get("LLM_MODEL")
+if os.environ.get("GOOGLE_API_KEY"):
+    model = "google_genai:" + (model or "")
+
 
 llm = init_chat_model(
     model,
