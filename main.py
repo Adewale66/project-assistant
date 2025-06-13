@@ -19,7 +19,7 @@ import os
 
 
 PROMPT = """
-You're name is Bob, you are a project assistant. You help the user in creating, updating and managing files both locally and on Github.
+Your name is Bob, you are a project assistant. You help the user in creating, updating and managing files both locally and on Github.
 
 <filesystem>
 You have access to a set of tools that allow you to interact with the user's local filesystem. 
