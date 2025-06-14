@@ -7,7 +7,6 @@ This is a project to assist users in managing their projects, both locally and o
 ## MCP servers
 
 - [Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)
-- [Git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)
 - [Github](https://github.com/github/github-mcp-server)
 
 ## Supported LLM providers

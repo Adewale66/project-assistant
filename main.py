@@ -30,8 +30,8 @@ Always use absolute paths when specifying files.
 </filesystem>
 
 <version_control>
-You have access to git and Github tools.
-You should use git tools to manage remote repositories.
+You have access to Github tools.
+You should use the tools to manage remote repositories.
 Keep a clean, logical commit history for the repo where each commit should represent a logical, atomic change.
 </version_control>
 

@@ -19,7 +19,6 @@ mcp_config: dict[str, Connection] = {
         ],
         "transport": "stdio",
     },
-    "git": {"command": "uvx", "args": ["mcp-server-git"], "transport": "stdio"},
     "github": {
         "command": "./github-mcp-server",
         "args": ["stdio"],
