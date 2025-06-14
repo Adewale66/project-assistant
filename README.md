@@ -39,5 +39,5 @@ cp .env.example .env
 ### Run application
 
 ```bash
-uv run python main.py
+uv run main.py
 ```
